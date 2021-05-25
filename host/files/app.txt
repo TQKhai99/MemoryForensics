@@ -1,0 +1,5 @@
+Spotify	C:\\Users\\admin\\AppData\\Roaming\\Spotify\\Spotify.exe
+VSCode	C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe
+Telegram	C:\\Users\\admin\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe
+Zalo	C:\\Users\\admin\\AppData\\Local\\Programs\\Zalo\\Zalo.exe
+Line	C:\\Users\\admin\\AppData\\Local\\LINE\\bin\\LineLauncher.exe

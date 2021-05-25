@@ -1,0 +1,17 @@
+app	control
+app	C:\\Users\\admin\\AppData\\Local\\Programs\\Zalo\\Zalo.exe
+app	isoburn
+app	C:\\Users\\admin\\AppData\\Local\\Programs\\Zalo\\Zalo.exe
+chrome	https://www.engadget.com/
+app	cmd
+app	cmd
+app	cleanmgr
+chrome	https://www.mirror.co.uk/
+app	explorer
+app	C:\\Users\\admin\\AppData\\Local\\LINE\\bin\\LineLauncher.exe
+app	C:\\Users\\admin\\AppData\\Local\\Programs\\Zalo\\Zalo.exe
+chrome	https://www.storify.com/
+chrome	https://www.dailymail.co.uk/
+app	wfs
+app	isoburn
+chrome	https://www.nymag.com/

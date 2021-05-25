@@ -1,0 +1,12 @@
+Calculator	calc
+Command Prompt	cmd
+Windows Explorer	explorer
+WordPad	write
+Windows Fax and Scan	wfs
+Windows Disc Image Burning Tool	isoburn
+Volume Mixer	sndvol
+Notepad	notepad
+Disk Cleanup	cleanmgr
+Control Panel	control
+System Information	msinfo32
+Utility Manager	utilman
