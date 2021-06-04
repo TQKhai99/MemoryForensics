@@ -4,16 +4,16 @@ import time
 import random
 from os import listdir
 
-IMAGE_COUNT = 100
 PROCESS_COUNT_MIN = 15
 PROCESS_COUNT_MAX = 20
 FILES_PATH = '/home/r0n/Desktop/memdump/files/'
 DUMP_PATH = '/home/r0n/Desktop/memdump/dump/'
 SAMPLE = '/media/r0n/My Passport/Virtual/Script/sample_Win10.txt'
+MALWARE = '/media/r0n/My Passport/Virtual/Script/malware.txt'
+MALWARE_PATH = '/media/r0n/My Passport/Virtual/malware/'
 web_list = []
 app_list = []
 app_win_list = []
-malware = []
 
 def add_action(action_list_file, line):
     #print line
@@ -37,7 +37,7 @@ def add_app(action_list_file, process_type):
 def random_process_type():
     return random.sample(['web'], 1)[0]
 
-def load_all_actions():
+def load_all_actions(malware):
     f = open(FILES_PATH + 'domain.txt','r')
     for line in f:
         line = line.strip()
@@ -62,13 +62,13 @@ def load_all_actions():
         s = line.split('\t')
         app_win_list.append(s[1])
     f.close()
-    f = open(FILES_PATH + 'malware.txt','r')
-    for line in f:
-        if len(line) == 0:
-            break
-        malware.append(line)
-    f.close()
+    global malwares
+    malwares = os.listdir(MALWARE_PATH + malware + '/')
 
+def random_malware(number):
+    file = open(MALWARE, 'w')
+    file.write(str(sys.argv[2]) + '\n')
+    file.write(str(malwares[number]))
 
 def random_process_type():
     return random.sample(['chrome', 'app', 'app_win'], 1)[0]
@@ -81,12 +81,17 @@ def clear_file():
 def main():
     machine_id = 'TEST'
     action_list_file = SAMPLE
-    load_all_actions()
-    for image_count in range(IMAGE_COUNT):
+    data = 100
+    if(len(sys.argv) > 1):
+        data = int(sys.argv[1])
+    
+    load_all_actions(sys.argv[2])
+    for image_count in range(data):
         print(str(image_count) + '  ======================================')
         os.system('date')
         clear_file()
         print 'Generating random actions.'
+        random_malware(image_count % len(malwares))
         PROCESS_COUNT = random.randint(PROCESS_COUNT_MIN, PROCESS_COUNT_MAX)
         for process_count in range(PROCESS_COUNT):
             process_type = random_process_type()

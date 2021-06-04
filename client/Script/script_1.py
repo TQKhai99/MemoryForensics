@@ -5,7 +5,8 @@ import random
 # ABC
 PATH = "Z:\\Script\\"
 LIST_NAME = "sample_Win10.txt"
-MALWARE_PATH = 'Z:\\malware\\loki\\'
+MALWARE = "malware.txt"
+MALWARE_PATH = 'Z:\\malware\\'
 
 def open_web(app, url):
     if  app == 'chrome':
@@ -17,6 +18,7 @@ def open_app(app):
         subprocess.Popen(app)
     except:
         print app
+
 
 def main():
     result = []
@@ -36,9 +38,11 @@ def main():
             open_app(s[1])
             time.sleep(2)
     time.sleep(10)
-    file = random.choice([x for x in os.listdir(MALWARE_PATH) if os.path.isfile(os.path.join(MALWARE_PATH, x))])
-    os.startfile(MALWARE_PATH + file)
+    fa = open(PATH + MALWARE)
+    file = fa.readline().splitlines()[0]
+    name = fa.readline()
+    os.startfile(MALWARE_PATH + file + '\\' + name)
     time.sleep(10)
-    os.system("Z:\\Procdump\\procdump.exe -ma " + file)
+    os.system("Z:\\Procdump\\procdump.exe -ma " + name)
     
 main()
