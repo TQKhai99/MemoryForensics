@@ -1,0 +1,19 @@
+app	C:\\Users\\admin\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe
+app	utilman
+app	C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe
+app	C:\\Users\\admin\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe
+app	write
+chrome	https://www.vkontakte.ru/
+app	control
+chrome	https://www.xing.com/
+chrome	https://www.imdb.com/
+chrome	https://www.hatena.ne.jp/
+app	C:\\Users\\admin\\AppData\\Local\\Programs\\Zalo\\Zalo.exe
+app	msinfo32
+chrome	https://www.google.com.au/
+chrome	https://www.spotify.com/
+chrome	https://www.storify.com/
+chrome	https://www.houzz.com/
+chrome	https://www.ox.ac.uk/
+chrome	https://www.google.fr/
+app	write
